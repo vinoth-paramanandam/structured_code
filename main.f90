@@ -157,7 +157,7 @@ program main
    
     endif
 
-    if(mod(counter, print_iter) .eq. 0) npr = npr+0.05d0
+    !if(mod(counter, print_iter) .eq. 0) npr = npr+0.05d0
     
     if (counter >= max_counter) maxcount = .true.
     if (rss .lt. 1.0d-8) l2norm = .true.

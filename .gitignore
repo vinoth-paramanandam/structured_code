@@ -35,3 +35,6 @@
 plot*
 restart.in
 residual.in
+
+# Intel Advisor files
+adviser_intel/*

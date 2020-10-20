@@ -5,9 +5,9 @@ timeaccurate = .true.  ! If you want time accurate simulation
 cfl_no = 4.0d-1         ! give a specified value for cfl
 dt = 0.50d-6            ! Give a optimum time step value
 final_time = 100.0d8    ! Give the final time in seconds
-max_counter = 2000000    ! Max number of iterations to run
-print_iter = 100000       ! Plot file to be print after certain iterations
-print_val = 1000         ! Print residual to the screen after these iterations
+max_counter = 1000    ! Max number of iterations to run
+print_iter = 1000       ! Plot file to be print after certain iterations
+print_val = 100         ! Print residual to the screen after these iterations
 norm = .true.           ! Writing residual values to the file
 /
 
@@ -22,7 +22,7 @@ c1ref = 1.458d-6        ! Reference value of the viscosity
 gridfile = '400x200.fmt'    !Grid file name should be given here
 restartfile = 'restartout.in'  !Restart file name should be given here
 outputfile = 'residual.in'  !File to store the residual values
-restart_sim = .true.       !Make it true if you want to restart the simulation
+restart_sim = .false.       !Make it true if you want to restart the simulation
 /
 
 ! initial params can be modified for the different problems

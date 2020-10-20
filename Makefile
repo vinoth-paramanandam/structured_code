@@ -1,8 +1,8 @@
-FC = gfortran
+FC = ifort
 EXE = run
 
-OP_COMP = -O3 -fopenmp
-OP_LINK = -O3 -fopenmp
+OP_COMP = -O3 -g -xHost 
+OP_LINK = -O3 -g -xHost
 
 SRC = main.f90 \
 constant.f90 \
