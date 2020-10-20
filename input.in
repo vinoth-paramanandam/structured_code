@@ -1,0 +1,47 @@
+&pbl_params
+cfl = .true.           ! If you want to run your code using dt calculated by cfl
+ftime = .false.         ! If you want to run to a particular time
+timeaccurate = .true.  ! If you want time accurate simulation
+cfl_no = 4.0d-1         ! give a specified value for cfl
+dt = 0.50d-6            ! Give a optimum time step value
+final_time = 100.0d8    ! Give the final time in seconds
+max_counter = 2000000    ! Max number of iterations to run
+print_iter = 100000       ! Plot file to be print after certain iterations
+print_val = 1000         ! Print residual to the screen after these iterations
+norm = .true.           ! Writing residual values to the file
+/
+
+&const_params
+g1 = 1.4d0              ! Gamma value for the gas in use
+amol = 28.9647d0        ! Molecular weight for the gas
+pr_lam = 0.702d0        ! Prandtl number for viscous flows
+c1ref = 1.458d-6        ! Reference value of the viscosity
+/
+
+&file_params
+gridfile = '400x200.fmt'    !Grid file name should be given here
+restartfile = 'restartout.in'  !Restart file name should be given here
+outputfile = 'residual.in'  !File to store the residual values
+restart_sim = .true.       !Make it true if you want to restart the simulation
+/
+
+! initial params can be modified for the different problems
+&initial_params
+mach_no = 1.5d0
+ismach = .true.
+uinit = 0.0d0
+vinit = 0.0d0
+pinit = 13405.56973d0
+tinit = 50.0d0
+/
+
+! problem specific conditions
+&specific_conds
+problem_specific = .true.
+npr = 2.0d0
+/
+
+! Time Marching step
+&rk_params
+nsteps = 4
+/
